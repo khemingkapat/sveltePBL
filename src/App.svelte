@@ -2,13 +2,17 @@
 	import TailwindCss from "./TailwindCSS.svelte";
 	import Header from "./components/Header.svelte";
 	import Hamburger from "./components/Hamburger.svelte";
-	import Sidebar from './components/Sidebar.svelte'
-	let isOpen:boolean = false
+	import Sidebar from "./components/Sidebar.svelte";
+	let isOpen: boolean = false;
 </script>
 
+<div class='flex h-screen w-scren overflow-x-hidden'>
 <TailwindCss />
-<Hamburger on:click = {() => {isOpen = !isOpen}}/>
-{#if isOpen}
-<Sidebar />
-{/if}
-<Header/>
+<Hamburger
+	on:click={() => {
+		isOpen = !isOpen;
+	}}
+/>
+<Sidebar open={isOpen} />
+<Header />
+</div>
