@@ -6,7 +6,7 @@
 	let isOpen: boolean = false;
 </script>
 
-<div class='flex h-screen w-scren overflow-x-hidden'>
+<div class='flex'>
 <TailwindCss />
 <Hamburger
 	on:click={() => {

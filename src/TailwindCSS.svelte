@@ -3,5 +3,5 @@
 	@tailwind components;
 	@tailwind utilities;
 
-
+	
 </style>
