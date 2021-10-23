@@ -2,7 +2,7 @@
 	export let open;
 </script>
 
-<style global>
+<style>
 	.sidebar-custom-width {
 		@apply w-1/4;
 	}
@@ -16,5 +16,5 @@
 			transform
 			bg-black
 			duration-500"
-			class:sidebar-custom-width= {!open}
+			class:sidebar-custom-width= {open}
 			></nav>

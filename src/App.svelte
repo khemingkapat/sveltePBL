@@ -9,8 +9,10 @@
 <div class='flex'>
 <TailwindCss />
 <Hamburger
+	open = {isOpen}
 	on:click={() => {
-		isOpen = !isOpen;
+		isOpen = !isOpen
+		console.log(isOpen);
 	}}
 />
 <Sidebar open={isOpen} />

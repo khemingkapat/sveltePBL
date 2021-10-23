@@ -1,14 +1,37 @@
 <script lang="ts">
+	export let open;
 </script>
 
 <button
-	class="rounded-2xl 
+	class="rounded-l-2xl
 			w-16
 			h-16
-			bg-green-700 
+			bg-black
 			fixed 
 			top-0 
 			right-0
-			m-2
-			z-30" on:click>
+			p-3
+			z-30
+			transform
+			duration-500"
+	class:hamburger-position={open}
+	on:click
+>
+	<div class="z-31 flex flex-col">
+		<div class="hamburger mt-1.5" class:rotate-45={open}/>
+		<div class="hamburger" class:invisible={open}/>
+		<div class="hamburger" class:-rotate-45={open}/>
+	</div>
 </button>
+
+<style>
+	.hamburger-position {
+		@apply right-1/4;
+	}
+
+	.hamburger {
+		@apply bg-white p-0.5 rounded-md mb-2 transform duration-500;
+		width : 90%;
+	}
+
+</style>
