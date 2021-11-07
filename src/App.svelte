@@ -3,6 +3,7 @@
 	import Header from "./components/Header.svelte";
 	import Hamburger from "./components/Hamburger.svelte";
 	import Sidebar from "./components/Sidebar.svelte";
+	import DataChart from './pages/DataChart.svelte'
 	let isOpen: boolean = false;
 </script>
 
@@ -17,4 +18,5 @@
 />
 <Sidebar open={isOpen} />
 <Header />
+<DataChart/>
 </div>

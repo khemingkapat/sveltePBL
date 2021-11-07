@@ -1,5 +1,6 @@
 <script lang="ts">
 	export let open;
+	console.log(open)
 </script>
 
 <button
@@ -18,9 +19,9 @@
 	on:click
 >
 	<div class="z-31 flex flex-col">
-		<div class="hamburger mt-1.5" class:rotate-45={open}/>
-		<div class="hamburger" class:invisible={open}/>
-		<div class="hamburger" class:-rotate-45={open}/>
+		<div class="hamburger mt-1.5"/>
+		<div class="hamburger" />
+		<div class="hamburger" />
 	</div>
 </button>
 
