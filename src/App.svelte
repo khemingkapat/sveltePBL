@@ -7,16 +7,16 @@
 	let isOpen: boolean = false;
 </script>
 
-<div class='flex'>
+<div class='flex flex-col'>
 <TailwindCss />
 <Hamburger
 	open = {isOpen}
 	on:click={() => {
 		isOpen = !isOpen
-		console.log(isOpen);
 	}}
 />
 <Sidebar open={isOpen} />
 <Header />
 <DataChart/>
 </div>
+
