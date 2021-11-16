@@ -1,6 +1,5 @@
 <script lang="ts">
 	export let open;
-	console.log(open)
 </script>
 
 <button
