@@ -10,7 +10,13 @@ export interface pmData {
 
 }
 
-const fetchData = async (url) => {
+export enum freqType {
+	hour = 'hour',
+	day = "day",
+	week = 'week'
+}
+
+const fetchData = async (freq:freqType) => {
 	let resultData:pmData = {
 		date: [],
 		Humidity: [],
@@ -19,6 +25,8 @@ const fetchData = async (url) => {
 		PM10_0: [],
 		Temperature: [],
 	}
+
+	const url:string = `http://127.0.0.1:8080/${freq}`
 
 
 	await axios.get(url)
