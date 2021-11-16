@@ -1,8 +1,8 @@
 <script lang="ts">
-	import fetchData, { pmData } from "../scripts/fetchData";
+	import fetchData, { pmData, freqType } from "../scripts/fetchData";
 	import Line from "svelte-chartjs/src/Line.svelte";
 
-	let pmDataPromise = fetchData("http://127.0.0.1:8080/day");
+	let pmDataPromise = fetchData(freqType['day']);
 </script>
 
 <div class="flex flex-col">
