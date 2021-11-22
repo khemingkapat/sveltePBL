@@ -2,12 +2,12 @@
 	import fetchData, { pmData, freqType } from "../scripts/fetchData";
 	import Line from "svelte-chartjs/src/Line.svelte";
 
-	let pmDataPromise = fetchData(freqType['day']);
+	let pmDataPromise = fetchData(freqType['hour']);
 </script>
 
 <div class="flex flex-col">
 	{#await pmDataPromise}
-		<p>Waiting For The pmData</p>
+		<p class = 'text-center'>Waiting For The pmData</p>
 	{:then fetchPMData}
 		<Line
 			data={{
